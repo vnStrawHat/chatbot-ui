@@ -87,7 +87,7 @@ export const PluginSelect: FC<Props> = ({
             ChatGPT
           </option>
 
-          {PluginList.map((plugin) => (
+          {/* {PluginList.map((plugin) => (
             <option
               key={plugin.id}
               value={plugin.id}
@@ -95,7 +95,7 @@ export const PluginSelect: FC<Props> = ({
             >
               {plugin.name}
             </option>
-          ))}
+          ))} */}
         </select>
       </div>
     </div>

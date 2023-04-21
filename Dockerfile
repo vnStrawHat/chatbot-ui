@@ -25,5 +25,10 @@ COPY --from=build /app/next-i18next.config.js ./next-i18next.config.js
 # Expose the port the app will run on
 EXPOSE 3000
 
+# Support Proxy
+RUN apk update && apk add proxychains-ng
+COPY start_by_proxy.sh /app
+
 # Start the application
-CMD ["npm", "start"]
+# CMD ["npm", "start"]
+CMD ["/bin/sh", "/app/start_by_proxy.sh"]
